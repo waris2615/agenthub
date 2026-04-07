@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#69f6b8",
+                        "on-primary": "#39008c",
+                        "outline-variant": "#40485d",
+                        "on-secondary-fixed": "#003a45",
+                        "surface-container-low": "#091328",
+                        "tertiary-dim": "#58e7ab",
+                        "inverse-primary": "#6e3bd7",
+                        "on-primary-fixed-variant": "#370086",
+                        "surface-tint": "#ba9eff",
+                        "surface-container": "#0f1930",
+                        "secondary": "#53ddfc",
+                        "on-tertiary": "#006443",
+                        "secondary-dim": "#40ceed",
+                        "on-background": "#dee5ff",
+                        "tertiary-fixed": "#69f6b8",
+                        "surface-bright": "#1f2b49",
+                        "error": "#ff6e84",
+                        "error-container": "#a70138",
+                        "surface-dim": "#060e20",
+                        "on-secondary": "#004b58",
+                        "primary-fixed-dim": "#a27cff",
+                        "primary-container": "#ae8dff",
+                        "on-tertiary-fixed-variant": "#006544",
+                        "inverse-on-surface": "#4d556b",
+                        "on-error-container": "#ffb2b9",
+                        "secondary-fixed": "#65e1ff",
+                        "inverse-surface": "#faf8ff",
+                        "on-secondary-fixed-variant": "#005969",
+                        "outline": "#6d758c",
+                        "surface-container-highest": "#192540",
+                        "primary": "#ba9eff",
+                        "on-surface-variant": "#a3aac4",
+                        "on-primary-fixed": "#000000",
+                        "on-surface": "#dee5ff",
+                        "tertiary": "#9bffce",
+                        "tertiary-fixed-dim": "#58e7ab",
+                        "surface": "#060e20",
+                        "on-error": "#490013",
+                        "on-tertiary-fixed": "#00452d",
+                        "surface-variant": "#192540",
+                        "surface-container-high": "#141f38",
+                        "background": "#060e20",
+                        "primary-dim": "#8455ef",
+                        "on-tertiary-container": "#005a3c",
+                        "on-primary-container": "#2b006e",
+                        "secondary-fixed-dim": "#48d4f3",
+                        "primary-fixed": "#ae8dff",
+                        "on-secondary-container": "#ecfaff",
+                        "error-dim": "#d73357",
+                        "surface-container-lowest": "#000000",
+                        "secondary-container": "#00687a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(25, 37, 64, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .tonal-transition {
+            transition: background 0.3s ease;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #060e20;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #192540;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary/30">
+<!-- SideNavBar Shell -->
+<aside class="h-screen w-64 fixed left-0 top-0 z-40 bg-[#091328]/70 backdrop-blur-3xl shadow-2xl shadow-black/50 flex flex-col py-8 font-['Manrope'] tracking-tight font-semibold">
+<div class="px-8 mb-12">
+<h1 class="text-xl font-black tracking-tighter text-[#dee5ff]">Nocturnal</h1>
+<p class="text-[10px] uppercase tracking-[0.2em] text-primary mt-1">Marketing Architect</p>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Active Tab: Dashboard -->
+<a class="before:content-[''] before:absolute before:left-1 before:h-6 before:w-1 before:bg-[#9bffce] before:rounded-full text-white bg-[#192540] flex items-center px-6 py-4 transition-all relative" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="text-[#a3aac4] hover:text-[#dee5ff] hover:bg-[#192540]/50 hover:backdrop-blur-sm transition-all flex items-center px-6 py-4" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="campaign">campaign</span>
+<span>Campaigns</span>
+</a>
+<a class="text-[#a3aac4] hover:text-[#dee5ff] hover:bg-[#192540]/50 hover:backdrop-blur-sm transition-all flex items-center px-6 py-4" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="analytics">analytics</span>
+<span>Analytics</span>
+</a>
+<a class="text-[#a3aac4] hover:text-[#dee5ff] hover:bg-[#192540]/50 hover:backdrop-blur-sm transition-all flex items-center px-6 py-4" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<div class="p-4 rounded-xl bg-surface-container-high/50 border border-outline-variant/10">
+<div class="flex items-center gap-3">
+<img alt="User Profile" class="w-10 h-10 rounded-full" data-alt="professional male marketing director portrait in modern office setting with soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvMqfYY29-Etyj4jmwOZzvl_ucd5D5mNkT-noUdi8jQ6DEiF9RjOW45Sm_UrfEby7mg8nTbmgRsiLcZfccTnVgerTdDHt47r6ZB3KRQMTDWDwCPyT7iyLzSzdeT8zRa-xqgeg1y-Ij2wuO-TAsq4xTMD-2IAWfL_S3i9Fhq_CHHHnJ-aOFMpsANmTYQMuiJJQI6Sm2J8GKRwrnwRFe3tbYpVy421SoVVQL95l8OmGsPVFApPYqjOUThNF5irwvdjgJLc9PWjxa57z9"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">Alex Sterling</p>
+<p class="text-xs text-on-surface-variant truncate">Premium Plan</p>
+</div>
+</div>
+</div>
+</div></aside>
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 z-30 bg-[#060e20]/80 backdrop-blur-md shadow-lg shadow-black/20 flex justify-between items-center px-8 font-['Inter'] text-sm font-medium tonal-transition">
+<div class="flex items-center gap-8">
+<span class="text-lg font-bold text-[#dee5ff] uppercase tracking-widest">Command Center</span>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg" data-icon="search">search</span>
+<input class="bg-surface-container-highest/50 border-none rounded-full pl-10 pr-4 py-1.5 text-xs w-64 focus:ring-1 focus:ring-[#53ddfc]/40 transition-all placeholder:text-outline" placeholder="Search insights..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:text-white hover:bg-white/5 rounded-full p-2 transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="hover:text-white hover:bg-white/5 rounded-full p-2 transition-all">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</button>
+<button class="hover:text-white hover:bg-white/5 rounded-full p-2 transition-all">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</button>
+<div class="h-8 w-[1px] bg-outline-variant/20 mx-2"></div>
+<button class="bg-gradient-to-br from-primary to-primary-dim text-on-primary-container px-4 py-1.5 rounded-full text-xs font-bold hover:shadow-[0_0_20px_rgba(186,158,255,0.3)] transition-all">
+                Upgrade Pro
+            </button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-16 min-h-screen p-8 space-y-8 bg-surface">
+<!-- Header Section -->
+<section class="flex justify-between items-end">
+<div>
+<h2 class="text-display-lg font-headline font-extrabold text-on-surface tracking-tighter text-4xl">Architecture Overview</h2>
+<p class="text-on-surface-variant mt-2 max-w-md">Real-time performance distribution across all active digital channels.</p>
+</div>
+<div class="flex gap-3">
+<div class="flex bg-surface-container rounded-xl p-1">
+<button class="px-4 py-1.5 rounded-lg bg-surface-container-highest text-white text-xs font-semibold shadow-sm">Real-time</button>
+<button class="px-4 py-1.5 rounded-lg text-on-surface-variant text-xs font-semibold hover:text-white transition-colors">7 Days</button>
+<button class="px-4 py-1.5 rounded-lg text-on-surface-variant text-xs font-semibold hover:text-white transition-colors">30 Days</button>
+</div>
+</div>
+</section>
+<!-- Metrics Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Total Revenue -->
+<div class="glass-card p-6 rounded-xl border border-white/5 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/10 blur-3xl -mr-8 -mt-8 rounded-full"></div>
+<div class="flex justify-between items-start mb-4">
+<span class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</span>
+<span class="bg-secondary-container/30 text-secondary-fixed text-[10px] font-bold px-2 py-0.5 rounded-full">+12.4%</span>
+</div>
+<p class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider">Total Revenue</p>
+<p class="text-3xl font-headline font-extrabold mt-1">$482,900</p>
+</div>
+<!-- Conversion Rate -->
+<div class="glass-card p-6 rounded-xl border border-white/5 relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4">
+<span class="p-2 rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined" data-icon="troubleshoot">troubleshoot</span>
+</span>
+<span class="bg-secondary-container/30 text-secondary-fixed text-[10px] font-bold px-2 py-0.5 rounded-full">+3.1%</span>
+</div>
+<p class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider">Conversion Rate</p>
+<p class="text-3xl font-headline font-extrabold mt-1">4.28%</p>
+</div>
+<!-- Active Campaigns -->
+<div class="glass-card p-6 rounded-xl border border-white/5 relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4">
+<span class="p-2 rounded-lg bg-tertiary/10 text-tertiary">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+</span>
+<span class="text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded-full">Active Now</span>
+</div>
+<p class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider">Active Campaigns</p>
+<p class="text-3xl font-headline font-extrabold mt-1">24</p>
+</div>
+<!-- Traffic Sources -->
+<div class="glass-card p-6 rounded-xl border border-white/5 relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4">
+<span class="p-2 rounded-lg bg-error/10 text-error">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</span>
+<span class="bg-error-container/20 text-error-dim text-[10px] font-bold px-2 py-0.5 rounded-full">-0.8%</span>
+</div>
+<p class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider">Global Traffic</p>
+<p class="text-3xl font-headline font-extrabold mt-1">1.2M</p>
+</div>
+</section>
+<!-- Analytics & Growth Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Main Line Chart Visualization -->
+<div class="lg:col-span-2 glass-card p-8 rounded-xl border border-white/5">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h3 class="text-xl font-bold">Revenue Growth</h3>
+<p class="text-xs text-on-surface-variant">Comparative analysis of seasonal trends</p>
+</div>
+<div class="flex items-center gap-4 text-xs font-medium">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-on-surface">This Year</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-outline-variant"></span>
+<span class="text-on-surface-variant">Last Year</span>
+</div>
+</div>
+</div>
+<!-- SVG Line Chart Mockup -->
+<div class="h-[300px] w-full relative">
+<svg class="w-full h-full overflow-visible" viewbox="0 0 800 300">
+<!-- Grid Lines -->
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="0" x2="800" y1="0" y2="0"></line>
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="0" x2="800" y1="100" y2="100"></line>
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="0" x2="800" y1="200" y2="200"></line>
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="0" x2="800" y1="300" y2="300"></line>
+<!-- Last Year Line -->
+<path d="M0,250 Q100,240 200,260 T400,220 T600,240 T800,180" fill="none" stroke="#40485d" stroke-dasharray="4,4" stroke-width="2"></path>
+<!-- This Year Gradient Area -->
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#ba9eff" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#ba9eff" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,200 Q100,180 200,220 T400,120 T600,140 T800,40 L800,300 L0,300 Z" fill="url(#chartGradient)"></path>
+<!-- This Year Main Line -->
+<path d="M0,200 Q100,180 200,220 T400,120 T600,140 T800,40" fill="none" stroke="#ba9eff" stroke-width="4"></path>
+<!-- Pulse Point -->
+<circle class="animate-pulse" cx="800" cy="40" fill="#ba9eff" r="6">
+<animate attributename="r" dur="2s" repeatcount="indefinite" values="6;9;6"></animate>
+</circle>
+</svg>
+<!-- Chart Tooltip Mockup -->
+<div class="absolute top-4 right-12 bg-surface-container-highest p-3 rounded-lg shadow-xl border border-white/10 translate-x-1/2">
+<p class="text-[10px] text-on-surface-variant font-bold uppercase mb-1">Peak Performance</p>
+<p class="text-lg font-bold text-primary">$84.2k <span class="text-[10px] text-tertiary ml-1">+18%</span></p>
+</div>
+</div>
+<div class="flex justify-between mt-6 px-2 text-[10px] text-on-surface-variant font-bold tracking-widest uppercase">
+<span>JAN</span>
+<span>FEB</span>
+<span>MAR</span>
+<span>APR</span>
+<span>MAY</span>
+<span>JUN</span>
+<span>JUL</span>
+</div>
+</div>
+<!-- Campaign Leaderboard -->
+<div class="glass-card p-8 rounded-xl border border-white/5 flex flex-col">
+<h3 class="text-xl font-bold mb-6">Top Campaigns</h3>
+<div class="flex-1 space-y-6">
+<!-- Item 1 -->
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high overflow-hidden">
+<img alt="Campaign 1" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="abstract architectural digital art with sweeping curves and neon cyan lighting accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdBo4X2pqG_-g8pzaC4V8rDTww7tnJdmW03IHXRlvk960hjsBZf-QiZ2YHOPluE_lwREeuduS7ORLvR2XU9oIoUbp-8DjRJLjDSyrILu6uMMdfybOrZcjI4Qr2YPFnQwhKncGjTwAetUnehrqTp7gzgqkaWM4TVMnfX8DDuRDd3XOWCMMNWeATCEgW6hkwV37UY_JNmcafsf0ILBiayV-RQYmpnDQpfr2mNqq_uDQsPFiHKcsmvQ0EyZyWMVfxiyn5864wivh6qb8n"/>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Project Nebula</p>
+<div class="flex items-center gap-2 mt-1">
+<div class="h-1 flex-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-4/5"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant font-bold">80%</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high overflow-hidden">
+<img alt="Campaign 2" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="high-tech computer hardware components macro shot with glowing electronic lights in dark room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBayqUUvkaZpTISI4G3RhYe2uKJ827NaIlmcrQ4hsl9_09mmhHAblIXFSKWGO6F2j_KqigoTZXs9ZJ67wmInHSCFDU1g2H4B_sEO1qbmeDvANVSvLw1KhDLrW6wNUca75_MUI2pQbdepyn_d5ndroEfN56hTRfpwPdMD6aKE2-6qAbmrkiNd8H2yieBAxMgwV64-4BgHEOjnIfLNao3HuJ0rbbHuqxw5cCqXJE7anBjxKc57lVuOW4vHKdhDYy6_3_xPhJzrqwMZYno"/>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Aether Protocol</p>
+<div class="flex items-center gap-2 mt-1">
+<div class="h-1 flex-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[65%]"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant font-bold">65%</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high overflow-hidden">
+<img alt="Campaign 3" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="satellite view of earth at night showing glowing city networks across continents from space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBttX1GwoEcfMnubiLrNnudfK8sAekgV9pyIrGPMSYF-FuyApx8HQTCBNfJ-BIN4jPFh5snFpmztAivJdo3idWkbDi2TyhTBLfg5F1QS1qZaK_DB5N3c7d-VxAJPjPSGXGekqGmjVyaZdQG9gU7If1-2LMmJpttaKAFmAsedUTChfieCJ4Hg981FcnWm6OdU0dR9OlKBBwleKuwEi_XbwaRxPCkv-G31XKHWAatS0-Flyg6-czXnydJ6O7-Z2cn2LTI3HnRUIcc5CH6"/>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Global Reach X</p>
+<div class="flex items-center gap-2 mt-1">
+<div class="h-1 flex-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-1/2"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant font-bold">50%</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-3 rounded-xl bg-surface-container-highest hover:bg-surface-container-high text-on-surface text-xs font-bold transition-colors">
+                    View All Campaigns
+                </button>
+</div>
+</div>
+<!-- Channel Distribution & Recent Activity -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8 pb-12">
+<div class="glass-card p-8 rounded-xl border border-white/5">
+<h3 class="text-xl font-bold mb-6">Channel Distribution</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm">
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Search Ads
+                        </span>
+<span class="font-bold">45%</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Social Media
+                        </span>
+<span class="font-bold">30%</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Email Marketing
+                        </span>
+<span class="font-bold">15%</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline"></span> Referral
+                        </span>
+<span class="font-bold">10%</span>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl border border-white/5">
+<h3 class="text-xl font-bold mb-6">System Logs</h3>
+<div class="space-y-4">
+<div class="flex gap-4 items-start">
+<div class="p-2 rounded-full bg-tertiary/10 text-tertiary mt-1">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Q3 Strategy Finalized</p>
+<p class="text-xs text-on-surface-variant">Allocated $200k to social expansion</p>
+<p class="text-[10px] text-outline mt-1 uppercase font-bold">2 hours ago</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="p-2 rounded-full bg-primary/10 text-primary mt-1">
+<span class="material-symbols-outlined text-sm" data-icon="sync">sync</span>
+</div>
+<div>
+<p class="text-sm font-semibold">API Sync Complete</p>
+<p class="text-xs text-on-surface-variant">Updated metrics from 12 channels</p>
+<p class="text-[10px] text-outline mt-1 uppercase font-bold">5 hours ago</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FAB Action (Suppressed on details, shown on dashboard) -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-primary to-primary-dim rounded-full shadow-2xl flex items-center justify-center text-on-primary-container group hover:scale-110 transition-transform z-50">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span class="absolute right-full mr-4 bg-surface-container-highest px-3 py-1.5 rounded-lg text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">New Campaign</span>
+</button>
+</body></html>

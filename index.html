@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boba App</title>
+    <title>Corgi Boba</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -14,7 +14,7 @@
 
     <header class="bg-orange-400 text-white p-6 shadow-md sticky top-0 z-10">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-bold tracking-tight">Bubble Bliss</h1>
+            <h1 class="text-3xl font-bold tracking-tight">🐶 Corgi Boba 🐾</h1>
             <div class="relative cursor-pointer group" onclick="toggleCart()">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white group-hover:text-orange-200 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -66,17 +66,17 @@
     </main>
 
     <footer class="bg-gray-800 text-gray-400 text-center py-6 mt-12">
-        <p>&copy; 2024 Bubble Bliss. All rights reserved.</p>
+        <p>&copy; 2024 Corgi Boba. All rights reserved. 🍞</p>
     </footer>
 
     <script>
         const bobaMenu = [
-            { id: 1, name: "Classic Milk Tea", price: 4.50, description: "Black tea with milk and classic tapioca pearls.", img: "🧋", tags: ["Bestseller"] },
-            { id: 2, name: "Taro Slush", price: 5.00, description: "Sweet taro root blended with ice.", img: "🍠", tags: ["Sweet", "Ice"] },
-            { id: 3, name: "Matcha Latte", price: 5.50, description: "Premium matcha green tea with fresh milk.", img: "🍵", tags: ["Premium"] },
-            { id: 4, name: "Brown Sugar Boba", price: 6.00, description: "Rich brown sugar syrup with fresh milk and warm pearls.", img: "🍯", tags: ["Sweet"] },
-            { id: 5, name: "Mango Passionfruit", price: 5.25, description: "Refreshing fruit tea with mango and passionfruit.", img: "🥭", tags: ["Fruity", "Vegan"] },
-            { id: 6, name: "Thai Milk Tea", price: 4.75, description: "Authentic Thai tea with condensed milk.", img: "🇹🇭", tags: ["Strong"] }
+            { id: 1, name: "Corgi Classic Milk Tea", price: 4.50, description: "Black tea with milk and classic tapioca pearls. A good boy's favorite.", img: "🧋", tags: ["Bestseller"] },
+            { id: 2, name: "Sploot Taro Slush", price: 5.00, description: "Sweet taro root blended with ice. Perfect for a summer sploot.", img: "🍠", tags: ["Sweet", "Ice"] },
+            { id: 3, name: "Paw-cha Latte", price: 5.50, description: "Premium matcha green tea with fresh milk and paw-some flavor.", img: "🍵", tags: ["Premium"] },
+            { id: 4, name: "Loaf Brown Sugar Boba", price: 6.00, description: "Rich brown sugar syrup with fresh milk and warm pearls. Shaped like a loaf.", img: "🍞", tags: ["Sweet"] },
+            { id: 5, name: "Barking Mango Passionfruit", price: 5.25, description: "Refreshing fruit tea with mango and passionfruit. Barkingly delicious.", img: "🥭", tags: ["Fruity", "Vegan"] },
+            { id: 6, name: "Tail-wagging Thai Milk Tea", price: 4.75, description: "Authentic Thai tea with condensed milk. Will make you wag your tail.", img: "🇹🇭", tags: ["Strong"] }
         ];
 
         let cart = [];
@@ -216,7 +216,7 @@
             if (cart.length === 0) return;
             const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
             const totalCost = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2);
-            alert(`Thank you for your order!\n\nYou ordered ${totalItems} items for a total of $${totalCost}.\nYour Bubble Bliss is being prepared!`);
+            alert(`Thank you for your order! Woof! 🐶\n\nYou ordered ${totalItems} items for a total of $${totalCost}.\nYour Corgi Boba is being prepared!`);
             cart = [];
             updateCartUI();
             if (window.innerWidth < 768) {

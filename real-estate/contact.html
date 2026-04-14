@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | LuxEstate</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                Lux<span>Estate</span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="listings.html">Listings</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our team of luxury real estate experts</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section>
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3 style="margin-bottom: 2rem; font-size: 1.5rem;">Reach Out</h3>
+
+                    <div style="margin-bottom: 2rem;">
+                        <strong style="display: block; margin-bottom: 0.5rem; color: var(--secondary-color);">Headquarters</strong>
+                        <p>123 Luxury Avenue<br>Beverly Hills, CA 90210<br>United States</p>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <strong style="display: block; margin-bottom: 0.5rem; color: var(--secondary-color);">Phone</strong>
+                        <p>+1 (555) 123-4567<br>Mon-Fri, 9am - 6pm PST</p>
+                    </div>
+
+                    <div>
+                        <strong style="display: block; margin-bottom: 0.5rem; color: var(--secondary-color);">Email</strong>
+                        <p>info@luxestate.com<br>sales@luxestate.com</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div style="background: white; padding: 2.5rem; border-radius: 8px; box-shadow: var(--shadow-sm);">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">Send us a Message</h3>
+                    <div id="form-success" class="hidden" style="background-color: #c6f6d5; color: #2f855a; padding: 1rem; border-radius: 4px; margin-bottom: 1.5rem;">
+                        Thank you for your message! We will get back to you shortly.
+                    </div>
+                    <form id="contact-form">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="form-control">
+                                <span class="form-error" id="firstName-error">First name is required.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="form-control">
+                                <span class="form-error" id="lastName-error">Last name is required.</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control">
+                            <span class="form-error" id="email-error">Please enter a valid email address.</span>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" class="form-control">
+                                <option value="general">General Inquiry</option>
+                                <option value="buying">Buying a Property</option>
+                                <option value="selling">Selling a Property</option>
+                                <option value="tour">Schedule a Tour</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 2rem;">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" class="form-control"></textarea>
+                            <span class="form-error" id="message-error">Message is required.</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 1rem; display: inline-block;">
+                        Lux<span style="color: var(--secondary-color);">Estate</span>
+                    </a>
+                    <p style="color: #a0aec0; margin-bottom: 1rem;">Redefining luxury real estate with innovative 3D technology and exceptional service.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Properties</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links" style="color: #a0aec0;">
+                        <li>123 Luxury Ave, Beverly Hills, CA</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>info@luxestate.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LuxEstate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if(typeof initContactForm === 'function') initContactForm();
+        });
+    </script>
+</body>
+</html>

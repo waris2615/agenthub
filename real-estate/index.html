@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxEstate | Premium Real Estate</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                Lux<span>Estate</span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="listings.html">Listings</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section with 3D Background -->
+    <section class="hero">
+        <div id="hero-3d-container"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Discover Your Next Extraordinary Home</h1>
+            <p>Experience properties like never before with our interactive 3D tours and unparalleled luxury listings.</p>
+            <a href="listings.html" class="btn btn-primary">Browse Properties</a>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <div class="container">
+        <div class="search-form-container">
+            <form class="search-form" id="home-search-form" action="listings.html" method="GET">
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" class="form-control" placeholder="City, neighborhood...">
+                </div>
+                <div class="form-group">
+                    <label for="type">Property Type</label>
+                    <select id="type" name="type" class="form-control">
+                        <option value="all">All Types</option>
+                        <option value="house">House</option>
+                        <option value="apartment">Apartment</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="maxPrice">Max Price</label>
+                    <select id="maxPrice" name="maxPrice" class="form-control">
+                        <option value="">Any Price</option>
+                        <option value="1000000">Up to $1,000,000</option>
+                        <option value="2500000">Up to $2,500,000</option>
+                        <option value="5000000">Up to $5,000,000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block" style="height: 45px;">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Featured Properties Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title text-center">Featured Properties</h2>
+            <p class="section-subtitle text-center">Hand-picked selections of our most stunning homes</p>
+
+            <div id="loading-spinner">Loading properties...</div>
+            <div class="properties-grid" id="featured-properties-grid">
+                <!-- Properties will be dynamically injected here -->
+            </div>
+
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="listings.html" class="btn btn-outline">View All Listings</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 1rem; display: inline-block;">
+                        Lux<span style="color: var(--secondary-color);">Estate</span>
+                    </a>
+                    <p style="color: #a0aec0; margin-bottom: 1rem;">Redefining luxury real estate with innovative 3D technology and exceptional service.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Properties</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links" style="color: #a0aec0;">
+                        <li>123 Luxury Ave, Beverly Hills, CA</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>info@luxestate.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LuxEstate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/three-app.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Page specific initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            if(typeof initHero3D === 'function') initHero3D();
+            if(typeof loadFeaturedProperties === 'function') loadFeaturedProperties();
+        });
+    </script>
+</body>
+</html>
